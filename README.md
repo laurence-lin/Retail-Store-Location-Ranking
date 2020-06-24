@@ -9,11 +9,11 @@ Data Collection:
 The retail store sample we choose to analyze in this project is 50 Mcdonald’s restaurants in New York. The data is collected by Foursquare API, and the target store popularity is collected by total comments from Google Place API. We selected New York city as our analyze target because there are more API user locate in the city, and more data we could collect around that area. Originating from the geographic center of New York, we collect data of all Mcdonald’s from a circle range of 15 kilometer radius. Due to the limit of query of Google Place API, totally we get 50 retail stores with there total comments. We assumed total comments on Google Map represents each store’s popularity.
 
 ![image](https://github.com/laurence-lin/Retail-Store-Location-Ranking/blob/master/area.jpg)
-Fig. 1 The area to analyze in New York. Red spot is the location of retail store
+                     Fig. 1 The area to analyze in New York. Red spot is the location of retail store
 
 ![image](https://github.com/laurence-lin/Retail-Store-Location-Ranking/blob/master/retail_store.jpg)
 
-Fig. 2 The nearby area of a retail store to analze
+                                       Fig. 2 The nearby area of a retail store to analze
 
 For each retail store, we collect geographic data such as neighbor competitors. The geographic data is collected nearby each retail store within 200 meter radius. The features includes:
 
@@ -33,13 +33,13 @@ Exploratory Data Analysis:
 
 ![image](https://github.com/laurence-lin/Retail-Store-Location-Ranking/blob/master/linear_scatter.png)
 
-Fig. 3 Distribution of each feature with respect to target
+                                   Fig. 3 Distribution of each feature with respect to target
 
 It’s hardly to discover linear relationship between each feature and the target. However, we could found two outliers in the data, we could drop these two samples for data cleaning.
 
 ![image](https://github.com/laurence-lin/Retail-Store-Location-Ranking/blob/master/residence_venue.png)
 
-Fig. 4 Residence venue VS. Density
+                                                 Fig. 4 Residence venue VS. Density
 
 Residential venues and density have positive relationship. It’s reasonable since residential venue is contained in the venue density. Here we can observe that many data points gathered in less residence venue area. 
 .
@@ -60,7 +60,7 @@ To analyze the elements that affects the retail store popularity, we care about 
 
 ![image](https://github.com/laurence-lin/Retail-Store-Location-Ranking/blob/master/single_feature_result.jpg)
 
-Table 1. Individual Feature Performance
+                                                Table 1. Individual Feature Performance
 
 To validate the efficiency, we compare the result with a random baseline which is created by randomly sort the testing items. The performances shows that total competitiveness outperform other features as the best geographic feature for retail store ranking. 
 
@@ -72,7 +72,7 @@ At least one of the popularity data and competitiveness feature is required, we 
 
 ![image](https://github.com/laurence-lin/Retail-Store-Location-Ranking/blob/master/combine_feature.jpg)
 
-Table. 2 Combined geographic features performance
+                                           Table. 2 Combined geographic features performance
 
 As opposed to our expectations, single total competitiveness performs best behavior. For the popularity feature, both residence venue and density gives promising result.
 
