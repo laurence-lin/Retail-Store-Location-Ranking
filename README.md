@@ -2,9 +2,11 @@
 Select the best location for a new opening retail store by ranking. 
 
 Retail store location selection is an important task for retailers and investors. For an new opening retail store, business analyst and data scientists analyze the local area, number of potential costumers, competitors, cost and make decision by ranking the candidate store location.
-The retail store location selection analysis require strong background knowledge and experience, and is a challenging task since it may cost huge loss if the store location is wrongly decided. A failed investment of a retail store may result in millions dollars loss from investor. In this project, we attempt to exploit data analysis and machine learning approach to help predict the ranking of retail store location candidates. Our aim is to find elements that benefit the retail quality of a location, and build predictive model to decide highest ranking candidate for a new opening retail store.
-The retail store sample we choose to analyze in this project is 50 Mcdonald’s restaurants in New York. The data is collected by Foursquare API, and the target value we used to estimate the store’s popularity is collected by total comments from Google Place API.
-We selected New York city as our analyze target because there are more API user locate in the city, and more data we could collect around that area. Originating from the geographic center of New York, we collect data of all Mcdonald’s from a circle range of 15 kilometer radius. We scraped the total comments of each store by Google Place API, and combine them together. Due to the limit of query of Google Place API, totally we get 50 retail stores with there total comments. We assumed total comments could present each store’s popularity.
+
+In this project, we exploit data analysis and machine learning approach to help predict the ranking of retail store location candidates. The aim is to find elements that benefit the retail quality of a location, and build predictive model to decide highest ranking candidate for a new opening retail store.
+
+Data Collection: 
+The retail store sample we choose to analyze in this project is 50 Mcdonald’s restaurants in New York. The data is collected by Foursquare API, and the target store popularity is collected by total comments from Google Place API. We selected New York city as our analyze target because there are more API user locate in the city, and more data we could collect around that area. Originating from the geographic center of New York, we collect data of all Mcdonald’s from a circle range of 15 kilometer radius. Due to the limit of query of Google Place API, totally we get 50 retail stores with there total comments. We assumed total comments on Google Map represents each store’s popularity.
 
 ![image](https://github.com/laurence-lin/Retail-Store-Location-Ranking/blob/master/area.jpg)
 Fig. 1 The area to analyze in New York. Red spot is the location of retail store
@@ -12,13 +14,18 @@ Fig. 1 The area to analyze in New York. Red spot is the location of retail store
 ![image](https://github.com/laurence-lin/Retail-Store-Location-Ranking/blob/master/retail_store.jpg)
 Fig. 2 The nearby area of a retail store to analze
 
-For each retail store, we collect geographic data such as neighbor competitors. The geographic data is collected nearby each retail store within 200 meter radius.
-We collect several geographic features from Foursquare API for each retail store, including:
+For each retail store, we collect geographic data such as neighbor competitors. The geographic data is collected nearby each retail store within 200 meter radius. The features includes:
+
 Density: number of neighbor venues
+
 Competitiveness: number of same type (fast food restaurant) in the nearby area
+
 Neighbor entropy: the diversity of venue types in the nearby area
+
 Total competitiveness: number of all possible competitors (all type restaurants) in the nearby area
+
 Area popularity: Number of residential venue in the nearby area
+
 We summarize the factors that influence a retail store’s popularity: Consumer behavior, area popularity, and number of competitors. By Foursquare API, we scrape density and residential venues as area popularity, and competitiveness for fast food restaurant and all type restaurants. Space heterogeneity is considered by previous research, that diversity of venue implies different type of potential consumers.
 Exploratory Data Analysis: We observe the relationship between each features and the target, number of comments.
 
