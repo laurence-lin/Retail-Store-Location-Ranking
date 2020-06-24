@@ -6,9 +6,12 @@ The retail store location selection analysis require strong background knowledge
 The retail store sample we choose to analyze in this project is 50 Mcdonald’s restaurants in New York. The data is collected by Foursquare API, and the target value we used to estimate the store’s popularity is collected by total comments from Google Place API.
 We selected New York city as our analyze target because there are more API user locate in the city, and more data we could collect around that area. Originating from the geographic center of New York, we collect data of all Mcdonald’s from a circle range of 15 kilometer radius. We scraped the total comments of each store by Google Place API, and combine them together. Due to the limit of query of Google Place API, totally we get 50 retail stores with there total comments. We assumed total comments could present each store’s popularity.
 
+![image](https://github.com/laurence-lin/Retail-Store-Location-Ranking/blob/master/area.jpg)
 Fig. 1 The area to analyze in New York. Red spot is the location of retail store
 
+![image](https://github.com/laurence-lin/Retail-Store-Location-Ranking/blob/master/retail_store.jpg)
 Fig. 2 The nearby area of a retail store to analze
+
 For each retail store, we collect geographic data such as neighbor competitors. The geographic data is collected nearby each retail store within 200 meter radius.
 We collect several geographic features from Foursquare API for each retail store, including:
 Density: number of neighbor venues
